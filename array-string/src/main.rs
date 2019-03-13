@@ -11,7 +11,7 @@ fn main() {
     // println!("{}", char_in_string_is_unique_01("aba"));
     // println!("{}", char_in_string_is_unique_01("abcABC"));
     // println!("{}", char_in_string_is_unique_01("abcABCC"));
-    let mut s = "123456789".to_owned();
+    let mut s = "123".to_owned();
     unsafe {
         reverse(&mut s);
     }
@@ -88,5 +88,8 @@ unsafe fn c_reverse(s: *mut c_char) {
 }
 
 unsafe fn reverse(s: &mut String) {
+    if s.len() < 2 {
+        return;
+    }
     c_reverse(s.as_mut_ptr() as *mut c_char);
 }
