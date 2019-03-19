@@ -1,0 +1,7 @@
+[package]
+name = "linked-list"
+version = "0.1.0"
+authors = ["Sihao Fang <sihao@momenta.ai>"]
+edition = "2018"
+
+[dependencies]
